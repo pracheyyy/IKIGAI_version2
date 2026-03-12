@@ -1,17 +1,13 @@
-/* =========================
-   RESET
-========================= */
+/* ================= RESET ================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:"Segoe UI",sans-serif;
 }
 
-/* =========================
-   PAGE BACKGROUNDS
-========================= */
+/* ================= COMMON PAGE BACKGROUNDS ================= */
 
 .index-page,
 .auth-page,
@@ -24,9 +20,7 @@ align-items:center;
 padding:20px;
 }
 
-/* =========================
-   MAIN CONTAINERS
-========================= */
+/* ================= COMMON CONTAINERS ================= */
 
 .center-box,
 .auth-container,
@@ -39,18 +33,14 @@ border-radius:25px;
 text-align:center;
 }
 
-/* =========================
-   IKIGAI IMAGE
-========================= */
+/* ================= IKIGAI IMAGE ================= */
 
 .logo{
 width:220px;
 margin-bottom:30px;
 }
 
-/* =========================
-   LANDING PAGE
-========================= */
+/* ================= LANDING PAGE ================= */
 
 .ikigai-title{
 font-size:72px;
@@ -64,9 +54,7 @@ margin:25px 0 45px 0;
 font-style:italic;
 }
 
-/* =========================
-   INPUT FIELDS
-========================= */
+/* ================= INPUT FIELDS ================= */
 
 input{
 width:100%;
@@ -78,9 +66,7 @@ font-size:16px;
 background:#f5f5f5;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* ================= MAIN BUTTON ================= */
 
 .primary-btn{
 width:100%;
@@ -91,120 +77,188 @@ border:1px solid black;
 background:white;
 font-size:18px;
 cursor:pointer;
-transition:0.2s;
+transition:0.25s;
 }
 
 .primary-btn:hover{
 background:#f3f3f3;
+transform:scale(1.02);
 }
 
-/* =========================
-   HOME PAGE
-========================= */
+/* ================= HOME PAGE ================= */
 
 .home-page{
-background:#f3f3f3;
+background:linear-gradient(to bottom,#f8f8f8,#f2f2f2);
 min-height:100vh;
 }
 
-/* =========================
-   TOP BAR
-========================= */
+/* ================= NAVBAR ================= */
 
-.topbar{
-background:#e7ea9b;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 45px;
+background:linear-gradient(90deg,#d9de8a,#e9ecb2);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.nav-left{
 display:flex;
 align-items:center;
-padding:15px 40px;
-gap:15px;
+gap:16px;
 }
-
-/* =========================
-   PROFILE
-========================= */
 
 .profile{
-width:50px;
-height:50px;
+width:55px;
+height:55px;
 border-radius:50%;
 background:#ddd;
+box-shadow:0 3px 8px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   QUOTE
-========================= */
+.user-info h2{
+font-size:22px;
+font-weight:600;
+color:#222;
+}
+
+/* ================= SETTINGS BUTTON ================= */
+
+.settings-btn{
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+font-size:20px;
+cursor:pointer;
+background:white;
+box-shadow:0 5px 12px rgba(0,0,0,0.18);
+transition:0.25s;
+}
+
+.settings-btn:hover{
+transform:rotate(45deg) scale(1.1);
+}
+
+/* ================= QUOTE HERO ================= */
+
+.quote-section{
+display:flex;
+justify-content:center;
+margin-top:25px;
+}
 
 .quote-box{
+background:white;
+padding:25px 45px;
+border-radius:16px;
+font-size:24px;
+font-style:italic;
+color:#444;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+max-width:650px;
 text-align:center;
-padding:20px;
-font-size:20px;
-font-weight:500;
 }
 
-/* =========================
-   HISTORY BOX
-========================= */
+/* ================= HISTORY ================= */
+
+.history-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:25px;
+}
 
 .history-box{
-background:#ddd;
-margin:30px auto;
-width:80%;
+width:75%;
 max-width:900px;
-padding:60px;
-text-align:center;
-border-radius:25px;
+height:170px;
+border-radius:40px;
+background:#e3e3e3;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+color:#555;
+box-shadow:inset 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* =========================
-   TRACK BUTTON
-========================= */
+/* ================= TRACK BUTTON ================= */
 
 .track-btn{
-display:block;
-margin:25px auto;
-padding:16px 55px;
-border-radius:35px;
+margin-top:30px;
+padding:15px 60px;
 border:none;
-background:#e7b6c2;
+border-radius:32px;
+background:#d7a4ad;
 font-size:18px;
 cursor:pointer;
+transition:0.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.12);
 }
 
-/* =========================
-   CARDS SECTION
-========================= */
+.track-btn:hover{
+background:#c7919b;
+transform:scale(1.07);
+}
+
+/* ================= FEATURES ================= */
+
+.features-section{
+margin-top:35px;
+display:flex;
+justify-content:center;
+}
 
 .cards{
 display:flex;
-justify-content:center;
-gap:25px;
+gap:22px;
 flex-wrap:wrap;
-margin-top:35px;
+justify-content:center;
 }
+
+/* ================= CARD ================= */
 
 .card{
-background:#e7c5cc;
-padding:28px;
-width:260px;
+background:#e9c2c9;
+width:280px;
+padding:35px;
+border-radius:22px;
 text-align:center;
-border-radius:18px;
-box-shadow:0px 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* ================= CARD BUTTON ================= */
 
 .card button{
-margin-top:18px;
-padding:12px 22px;
+padding:10px 25px;
 border-radius:25px;
-border:1px solid black;
+border:1px solid #444;
 background:white;
 cursor:pointer;
+transition:0.25s;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+.card button:hover{
+background:#f5f5f5;
+transform:scale(1.05);
+}
 
-@media (max-width:768px){
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
 
 .center-box,
 .auth-container,
@@ -217,18 +271,22 @@ padding:40px 25px;
 font-size:52px;
 }
 
+.navbar{
+padding:15px 25px;
+}
+
 .cards{
 flex-direction:column;
 align-items:center;
 }
 
 .history-box{
-width:95%;
-padding:40px;
+width:90%;
 }
 
-.topbar{
-padding:15px 20px;
+.quote-box{
+font-size:20px;
+padding:20px 30px;
 }
 
 }

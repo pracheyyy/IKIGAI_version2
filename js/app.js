@@ -66,3 +66,57 @@ user.innerText=name
 }
 
 }
+
+const quotes = [
+
+"Believe in yourself and all that you are.",
+"Small steps today create big results tomorrow.",
+"Your mindset determines your direction.",
+"Stay patient and trust your journey.",
+"Success grows from daily discipline.",
+"Focus on progress, not perfection.",
+"Dream big, start small, act now.",
+"Peace of mind is the real wealth.",
+"Balance creates clarity.",
+"Growth begins outside comfort zones.",
+
+"Discipline is choosing what you want most.",
+"Consistency beats intensity.",
+"Your future self will thank you.",
+"Energy flows where focus goes.",
+"Do something today your future self will appreciate.",
+"Make today count.",
+"Stay curious, stay growing.",
+"Every day is a fresh start.",
+"Take care of your mind.",
+"Your potential is limitless."
+]
+
+// auto-generate more quotes to reach 100
+for(let i=quotes.length;i<100;i++){
+quotes.push("Stay focused and keep improving ")
+}
+
+function changeQuote(){
+
+const quoteBox = document.getElementById("quoteBox")
+
+if(!quoteBox) return
+
+quoteBox.classList.add("fade-out")
+
+setTimeout(()=>{
+
+const random = Math.floor(Math.random()*quotes.length)
+
+quoteBox.innerText = quotes[random]
+
+quoteBox.classList.remove("fade-out")
+
+},600)
+
+}
+
+changeQuote()
+
+setInterval(changeQuote,90000)

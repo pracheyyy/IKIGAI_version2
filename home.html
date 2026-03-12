@@ -1,50 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ikigai Dashboard</title>
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="home-page">
 
-<header class="topbar">
+<!-- NAVBAR -->
 
-<div class="profile"></div>
+<header class="navbar">
 
-<h2 id="username"></h2>
+<div class="nav-left">
+
+<div class="user-info">
+<h2 id="username">User Name</h2>
+</div>
+
+</div>
+
+<div class="nav-right">
+
+<button class="settings-btn" title="Settings">
+⚙
+</button>
+
+</div>
 
 </header>
 
-<div class="quote-box">
-[ quote changing every hour ]
+
+<!-- QUOTE SECTION -->
+
+<div class="quote-section">
+
+<div class="quote-box" id="quoteBox">
+Loading inspiration...
 </div>
 
-<div class="history-box">
-previous history data
 </div>
 
-<button class="track-btn">Track the history</button>
+
+<!-- FEATURES SECTION -->
+
+<section class="features-section">
 
 <div class="cards">
 
 <div class="card">
-<h3>Lets analyze your ikigai score!</h3>
-<button>let's go!</button>
+
+<h3>Lets analyze your Ikigai score!</h3>
+
+<button onclick="startIkigai()">
+Let's go!
+</button>
+
 </div>
 
+
 <div class="card">
+
 <h3>Accept daily challenge</h3>
-<button>let's begin!</button>
+
+<button onclick="dailyChallenge()">
+Let's begin!
+</button>
+
 </div>
+
 
 <div class="card">
+
 <h3>Meet your listener (chatbot)</h3>
-<button>let's talk!</button>
+
+<button onclick="openChat()">
+Let's talk!
+</button>
+
 </div>
 
 </div>
+
+</section>
+
+<!-- HISTORY SECTION -->
+
+<section class="history-section">
+
+<button class="track-btn">
+Track the history
+</button>
+
+</section>
+
 
 <script src="js/app.js"></script>
+
 </body>
+
 </html>
