@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ikigai Progress</title>
+
+<style>
+
+/* Page */
+
+body{
+font-family: "Segoe UI", sans-serif;
+background:#f5f6f7;
+padding:40px;
+}
+
+/* Title */
+
+h1{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+}
+
+/* Summary Cards */
+
+.summary{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.summary-card{
+background:white;
+padding:25px 45px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+min-width:180px;
+}
+
+.summary-card h3{
+font-size:18px;
+margin-bottom:10px;
+color:#555;
+}
+
+.summary-card p{
+font-size:28px;
+font-weight:bold;
+color:#333;
+}
+
+/* Table */
+
+.history-table{
+margin:0 auto;
+width:80%;
+max-width:900px;
+border-collapse:collapse;
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.history-table th{
+background:#e7ea9b;
+padding:15px;
+font-size:16px;
+}
+
+.history-table td{
+padding:14px;
+text-align:center;
+border-bottom:1px solid #eee;
+font-size:15px;
+}
+
+.history-table tr:hover{
+background:#fafafa;
+}
+
+/* Check and Cross */
+
+.check{
+color:#2ecc71;
+font-size:18px;
+font-weight:bold;
+}
+
+.cross{
+color:#e74c3c;
+font-size:18px;
+font-weight:bold;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.history-table{
+width:95%;
+}
+
+.summary{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Your Ikigai Progress</h1>
+
+<div class="summary">
+
+<div class="summary-card">
+<h3>Total Coins</h3>
+<p id="totalCoins">0</p>
+</div>
+
+<div class="summary-card">
+<h3>Active Days</h3>
+<p id="activeDays">0</p>
+</div>
+
+</div>
+
+<table class="history-table">
+
+<thead>
+
+<tr>
+<th>Date</th>
+<th>Passion</th>
+<th>Skill</th>
+<th>Purpose</th>
+<th>Coins</th>
+</tr>
+
+</thead>
+
+<tbody id="historyBody">
+
+</tbody>
+
+</table>
+
+<script src="js/history.js"></script>
+
+</body>
+</html>
